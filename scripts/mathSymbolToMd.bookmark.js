@@ -2,14 +2,14 @@
   function transformMathStr(text) {
     const flagReg = /\s*\\(\(|\)|\[|\])\s*/g;
     return text.replace(flagReg, function (match, p1) {
-      let tareget = "";
+      let target = "";
       if ("()".includes(p1)) {
-        tareget = "$";
+        target = "$";
       }
       if ("[]".includes(p1)) {
-        tareget = "$$";
+        target = "$$";
       }
-      return tareget;
+      return target;
     });
   }
   function createModal() {
